@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: urja-cicd-app
+  labels:
+    app: urja-cicd-app
+    owner: urja-pipalia
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: urja-cicd-app
+  template:
+    metadata:
+      labels:
+        app: urja-cicd-app
+    spec:
+      containers:
+        - name: urja-cicd-app
+          image: localhost:5001/urja-cicd-app:latest
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              cpu: 50m
+              memory: 32Mi
+            limits:
+              cpu: 200m
+              memory: 128Mi
