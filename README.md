@@ -10,5 +10,5 @@ Pipeline: GitHub → Jenkins → Docker build → push to registry → deploy to
 |------|---------|
 | `Jenkinsfile` | Declarative pipeline (Checkout, Build Docker Image, Push to Registry, Deploy to Kubernetes, Verify Deployment) |
 | `Dockerfile` | nginx:alpine image serving `index.html` |
-| `k8s/deployment.yaml` | Kubernetes Deployment (2 replicas) |
+| `k8s/deployment.yaml` | Kubernetes Deployment (3 replicas) |
 | `k8s/service.yaml` | Kubernetes Service |

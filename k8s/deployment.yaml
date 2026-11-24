@@ -6,7 +6,7 @@ metadata:
     app: urja-cicd-app
     owner: urja-pipalia
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: urja-cicd-app
